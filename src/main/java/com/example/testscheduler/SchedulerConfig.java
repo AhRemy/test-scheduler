@@ -10,7 +10,8 @@ import net.javacrumbs.shedlock.provider.jdbctemplate.JdbcTemplateLockProvider;
 
 @Configuration
 public class SchedulerConfig {
-	@Bean
+	
+	@Bean  
 	public LockProvider lockProvider(DataSource dataSource) {
 		return new JdbcTemplateLockProvider(dataSource);
 	}
